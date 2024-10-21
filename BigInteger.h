@@ -28,9 +28,6 @@ public:
     // Function to display the linked list
     void display();
 
-    // Function to calculate the factorial of a large number
-    void factorial(int n);
-
     // Function to add two large numbers
     void add(BigInteger& num2);
 
