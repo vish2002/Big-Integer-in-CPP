@@ -15,7 +15,6 @@ BigInteger::~BigInteger() {
     }
 }
 
-// Function to add a new node at the end of the linked list
 void BigInteger::addNode(int data) {
     Node* newNode = new Node();
     newNode->data = data;
@@ -32,7 +31,7 @@ void BigInteger::addNode(int data) {
     }
 }
 
-// Function to display the linked list
+
 void BigInteger::display() {
     Node* temp = head;
     while (temp != nullptr) {
@@ -40,20 +39,6 @@ void BigInteger::display() {
         temp = temp->next;
     }
     std::cout << std::endl;
-}
-
-// Function to calculate the factorial of a large number
-void BigInteger::factorial(int n) {
-    BigInteger result;
-    result.addNode(1);
-
-    for (int i = 1; i <= n; i++) {
-        BigInteger temp;
-        temp.stringToBigInteger(std::to_string(i));
-        result.multiply(temp);
-    }
-
-    result.display();
 }
 
 // Function to add two large numbers
@@ -166,9 +151,6 @@ int main() {
 
     std::cout << "Subtraction: ";
     num1.subtract(num2);
-
-    std::cout << "Factorial of 5: ";
-    num1.factorial(5);
 
     return 0;
 }
